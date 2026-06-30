@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback - Help Hub</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Segoe UI,sans-serif;
+background:#f2f6fc;
+}
+
+header{
+background:#004080;
+color:white;
+padding:18px;
+text-align:center;
+}
+
+.container{
+max-width:600px;
+margin:30px auto;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h2{
+text-align:center;
+color:#004080;
+margin-bottom:10px;
+}
+
+p{
+text-align:center;
+color:#666;
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-top:15px;
+font-weight:bold;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:6px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:20px;
+background:#004080;
+color:white;
+border:none;
+border-radius:8px;
+font-size:17px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0066cc;
+}
+
+#message{
+text-align:center;
+margin-top:15px;
+font-weight:bold;
+color:green;
+}
+
+.back-btn{
+display:inline-block;
+margin-top:20px;
+padding:10px 20px;
+background:#004080;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+.back-btn:hover{
+background:#0066cc;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>💬 Feedback</h1>
+</header>
+
+<div class="container">
+
+<h2>Help Us Improve</h2>
+
+<p>Your feedback helps us make Help Hub better.</p>
+
+<form id="feedbackForm">
+  
+  <label>Name</label>
+  <input type="text" id="name" placeholder="Enter your name">
+
+
+<label>Email</label>
+<input type="email" id="email" placeholder="Enter your email">
+
+<label>Your Feedback</label>
+<textarea id="feedback" placeholder="Write your feedback here..."></textarea>
+
+<button type="submit">Submit Feedback</button>
+
+</form>
+
+<div id="message"></div>
+<h2 style="margin-top:30px;">📋 Submitted Feedback</h2>
+
+<div id="feedbackList"></div>
+<a href="index.html" class="back-btn">⬅ Back to Home</a>
+
+</div>
+
+<script type="module" src="feedback.js"></script>
+
+
+</body>
+</html>
