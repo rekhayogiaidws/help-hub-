@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Guidance</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background: #f4f8fb;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #0056b3;
+      color: white;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #004080;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #e56f1f;
+    }
+
+    header h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(120deg, #007bff, #00c6ff);
+      color: white;
+    }
+    .hero h1 { font-size: 2rem; margin-bottom: 15px; }
+    .hero p { font-size: 1.1rem; }
+
+    /* Sections */
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 { margin-bottom: 15px; color: #0056b3; }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Footer */
+    
+
+    /* Responsive */
+    @media(max-width: 700px) {
+      nav {
+        display: none; /* by default hidden on small screens */
+        flex-direction: column;
+        align-items: center;
+        background: #004080;
+        padding: 10px;
+      }
+      nav.show {
+        display: flex; /* visible only when toggled */
+      }
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Career Guidance</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="navbar">
+      <a href="#guidelines">Guidelines</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#future">Future Plans</a>
+      <a href="#resources">Resources</a>
+      
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Get Personalized Career Advice</h1>
+    <p>Helping students choose the right path for a successful future</p>
+  </div>
+
+  <!-- Guidelines Section -->
+  <section id="guidelines">
+    <h2>General Career Guidelines</h2>
+    <div class="card">
+      <p>✔ Identify your interests and strengths before choosing a career.</p>
+      <p>✔ Talk to mentors, teachers, or professionals in the field.</p>
+      <p>✔ Keep exploring new skills with free online platforms.</p>
+    </div>
+  </section>
+
+  <!-- Subjects Section -->
+  <section id="subjects">
+    <h2>Choosing Subjects After 10th/12th</h2>
+    <div class="card">
+      <p><b>Science:</b> Good for Engineering, Medical, IT, Research careers.</p>
+      <p><b>Commerce:</b> Great for Business, Finance, Management, CA, CS.</p>
+      <p><b>Arts:</b> Best for Law, Journalism, Design, UPSC, Teaching, etc.</p>
+    </div>
+  </section>
+
+  <!-- Future Plans Section -->
+  <section id="future">
+    <h2>Future Planning</h2>
+    <div class="card">
+      <p>🎯 Set short-term and long-term goals.</p>
+      <p>🎯 Keep updating skills through certifications.</p>
+      <p>🎯 Build a balance of knowledge + practical experience.</p>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources">
+    <h2>Helpful Resources</h2>
+    <div class="card">
+      <p>📌 <a href="https://www.careerguide.com" target="_blank">CareerGuide.com</a></p>
+      <p>📌 <a href="https://www.ncs.gov.in" target="_blank">National Career Service (Govt.)</a></p>
+      <p>📌 <a href="https://www.youtube.com/results?search_query=career+guidance" target="_blank">Career Guidance Videos (YouTube)</a></p>
+    </div>
+    <a href="index.html" class="back-btn">⬅Back to Home</a>
+  </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
