@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All in One Help</title>
+  
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/535/535239.png" type="image/png">
+
+  <!-- Meta Description -->
+  <meta name="description" content="🌐 SahyogSetu – A unique all-in-one help platform! 🚀 Students, Women, Hospitals & Everyone ke liye ek trusted jagah. यहां आपको मिलेगा: शिक्षा, सुरक्षा, स्वास्थ्य और सपोर्ट ek hi portal par. 💡">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="SahyogSetu - Aapka Help & Support Portal">
+  <meta property="og:description" content="🌐 Ek hi jagah par Students, Women aur Patients ke liye full help system. शिक्षा से लेकर स्वास्थ्य तक सबकुछ free & trusted! 🚀">
+<meta property="og:image" content="https://rekhayogiaidws.github.io/helphub.com/banner.png">
+<meta name="twitter:image" content="https://rekhayogiaidws.github.io/helphub.com/banner.png">
+  <meta property="og:url" content="https://rekhayogiaidws.github.io/helphub.com/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SahyogSetu - Aapka Help & Support Portal">
+  <meta name="twitter:description" content="🌐 Education, Health, Women Safety & More – सबकुछ ek trusted platform par. 🚀">
+  
+
+  <link rel="stylesheet" href="style.css" />
+<script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🌐 Help Hub</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="student.html" target="_self">Students</a>
+      <a href="women.html" target="_self">Women </a>
+      <a href="hospital.html" target="_self">Health</a>
+      <a href="help.html" target="_self">Helpline</a>
+      <a href="about.html">About Me</a>
+      <a href="login.html">Admin</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>🌐 Help Hub - Your Digital Support Platform</h1>
+
+<p>
+  Find Scholarships, Government Schemes, Health Services,
+  Emergency Helplines and Career Resources – All in One Place.
+</p>
+    <div class="hero-buttons">
+      <a href="#cards" >Explore Services</a>
+      
+    </div>
+  </section>
+  <div class="search-box">
+  <input
+type="text"
+id="searchInput"
+placeholder="Search services..."
+onkeyup="searchContent()">
+
+  <button onclick="searchContent()">
+    Search
+  </button>
+</div>
+<div id="recentVisit"></div>
+
+  <section class="services">
+    <h2>How Can We Help You?</h2>
+    <div class="cards" id="cards">
+      
+      <div class="card">
+        <h3>📚 Student Support</h3>
+        <p>Scholarships, Free Courses, Career Guidance & Learning Resources.
+          <h1> 
+          <a href="student.html" target="_self" class="diva"onclick="saveVisit('Student Support')">Explore Resources →</a></h1>
+        </p>
+      </div>
+      <div class="card">
+        <h3>👩‍🦰 Women Empowerment</h3>
+        <p>Self Defense, Free Training, Helplines, Safety & Awareness Programs.
+            <h1> 
+          <a href="women.html"  target="_self" class="diva"onclick="saveVisit('Women Support')">Explore Resources →</a></h1>
+        </p>
+      </div>
+      <div class="card">
+        <h3>🏥 Health </h3>
+        <p>Govt. Hospitals, Free Medicines, Ayushman Card, Mental Health Help.
+            <h1> 
+          <a href="hospital.html" target="_self" class="diva"onclick="saveVisit('Health Services')">Explore Resources →</a></h1>
+        </p>
+      </div>
+      <div class="card">
+        <h3>📞 Emergency Helplines</h3>
+        <p>Police, Ambulance, Childline, Women Help – all at one place.
+            <h1> 
+          <a href="help.html" target="_self" class="diva"onclick="saveVisit('Emergency Helplines')">Explore Resources →</a></h1>
+        </p>
+      </div>
+      <div class="card">
+        <h3>📝 Government Schemes</h3>
+        <p>PM Awas, Beti Bachao, Skill India, Free Laptop, Ration & more.
+       <h1> 
+          <a href="government.html" target="_self" class="diva"onclick="saveVisit('Government Schemes')">Explore Resources →</a></h1>    
+        </p>
+      </div>
+      <div class="card">
+  <h3>💬 Feedback</h3>
+  <p>
+    Share your suggestions and feedback to help us improve Help Hub.
+  </p>
+  <h1>
+    <a href="feedback.html" class="diva">Give Feedback →</a>
+  
+  </h1>
+</div>
+    </div>
+  </section>
+<section class="stats">
+
+  <div class="stat-box">
+    <h2>50+</h2>
+    <p>Resources</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>20+</h2>
+    <p>Scholarships</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>15+</h2>
+    <p>Helplines</p>
+  </div>
+
+  <div class="stat-box">
+    <h2>10+</h2>
+    <p>Govt Schemes</p>
+  </div>
+
+</section>
+  <footer>
+  
+  <p>© 2026 Help Hub</p>
+  
+  <p>
+    Providing Educational, Health and Government Resources
+    for Everyone.
+  </p>
+  <p style="margin-top:15px;">
+  <a href="login.html" style="color:white; text-decoration:underline;">
+    Admin Login
+  </a>
+</p>
+  <button onclick="scrollToTop()">
+    ⬆ Back to Top
+  </button>
+  
+</footer>
+<!-- AI Chat Button -->
+<button id="chatBtn">🤖 AI Help</button>
+
+<!-- Chat Box -->
+<div id="chatBox" class="hidden">
+  <div class="chat-header">
+    🤖 Help Hub AI
+    <span id="closeChat">✖</span>
+  </div>
+
+  <div id="messages">
+    <div class="bot">
+      👋 Hello! Welcome to Help Hub.<br>
+      Ask me anything.
+    </div>
+  </div>
+
+  <input
+    type="text"
+    id="userInput"
+    placeholder="Type your question..."
+  >
+
+  <button id="sendBtn">Send</button>
+</div>
+<script src="chatbot.js"></script>
+</body>
+</html>
