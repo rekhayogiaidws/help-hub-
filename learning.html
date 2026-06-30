@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduHub - Student Portal</title>
+  <style>
+    /* CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background: #1a237e;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: nowrap;   /* ✅ wrap बंद किया */
+      justify-content: center;
+      align-items: center; 
+      list-style: none;
+      margin-top: 10px;
+      gap: 10px;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      background: #3949ab;
+      padding: 0.5rem 0.8rem;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #5c6bc0;
+    }
+
+    main {
+      padding: 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      margin-bottom: 0.8rem;
+      color: #1a237e;
+    }
+.back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #004080;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #e56f1f;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+      color: #1a237e;
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    #searchBox {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    /* ❌ Media query से column हटाया */
+    @media(max-width: 600px) {
+      iframe {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 EduHub - Student Portal</h1>
+    <nav>
+      <ul>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#notes">Notes</a></li>
+        <li><a href="#platforms">Platforms</a></li>
+        <li><a href="#centers">Centers</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Search -->
+    <input type="text" id="searchBox" placeholder="🔍 Search links (e.g. NCERT, Byju's, Physics)..." onkeyup="filterLinks()"/>
+
+    <!-- NCERT Books -->
+    <section id="books">
+      <h2>📘 NCERT Books</h2>
+      <ul class="link-list">
+        <li><a href="https://ncert.nic.in/textbook.php" target="_blank">Official NCERT Textbooks (Class 6-12)</a></li>
+        <li><a href="https://ncertbooks.ncert.gov.in/" target="_blank">NCERT E-Books Portal</a></li>
+      </ul>
+    </section>
+
+    <!-- Notes -->
+    <section id="notes">
+      <h2>📝 Subject Notes</h2>
+      <ul class="link-list">
+        <li><a href="https://www.studyrankers.com/" target="_blank">Study Rankers</a></li>
+        <li><a href="https://byjus.com/ncert-solutions/" target="_blank">Byju's NCERT Solutions</a></li>
+      </ul>
+    </section>
+
+    <!-- Platforms -->
+    <section id="platforms">
+      <h2>🌐 Online Platforms</h2>
+      <ul class="link-list">
+        <li><a href="https://unacademy.com/" target="_blank">Unacademy</a></li>
+        <li><a href="https://byjus.com/" target="_blank">Byju's</a></li>
+        <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a></li>
+      </ul>
+    </section>
+
+    <!-- Study Centers -->
+    <section id="centers">
+      <h2>📍 Study Centers Near You</h2>
+      <p>Find coaching centers using <a href="https://www.google.com/maps/search/study+centers+near+me/" target="_blank">Google Maps</a></p>
+    </section>
+    
+    <a href="index.html" class="back-btn">⬅Back to Home</a>
+  </div>
+  </main>
+
+  <script>
+    // JavaScript: Search Filter
+    function filterLinks() {
+      const input = document.getElementById("searchBox").value.toLowerCase();
+      const lists = document.querySelectorAll(".link-list li");
+
+      lists.forEach((item) => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(input) ? "list-item" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
